@@ -56,7 +56,7 @@ if (isset($_GET['retreive_stations'])) {
     Continuous: <input type='checkbox' name='auto_scan'>
     <br /><br />
     <a id='overlay_start_stop' href='#' onclick="overlay_toggle_scan(); return false;">START SCAN</a> <span class='overlay_message'></span><br>
-	 <a id='overlay_start_pineap' href='#' onclick="make_request('/components/system/pineap/functions.php?action=start_pineap'); return false;">START PineAP</a>
+    
 	
 	
     

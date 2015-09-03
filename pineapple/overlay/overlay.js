@@ -11,7 +11,7 @@ function ap_scan()
 }
 
 function make_request(url) {
-	$.get(url);
+    $.get(url);
 }
 
 function retreive_aps(){
@@ -293,7 +293,7 @@ function pineAP_send_deauth() {
                 popup("<center><img style='width: 2.0em;' src='/includes/img/throbber.gif'></center>");
                 setTimeout(close_popup, 1000);
             } else {
-                popup("<center><span class='error'>Error sending deauth. PineAP must be started.</span></center>");
+                popup("<center><span class='error'>Error sending deauth. PineAP must be started. <a id='overlay_start_pineap' href='#' onclick=\"make_request('/components/system/pineap/functions.php?action=start_pineap'); return false;\">START NOW</a></span></center>");
             }
         }
     );
