@@ -14,6 +14,15 @@ function make_request(url) {
     $.get(url);
 }
 
+function start_pineap(option, option2) {
+    popup("<center>Starting PineAP...<br><br><img style='width: 2.0em;' src='/includes/img/throbber.gif'></center>");
+    make_request('/components/system/pineap/functions.php?action=start_pineap');
+    setTimeout(close_popup, 1000);
+    if (option == "resend_deauth") {
+        // Deauth code goes here.
+    }
+}
+
 function retreive_aps(){
     $.get('/overlay/overlay.php?retreive_aps', function(data){
         if(data.length){
@@ -279,7 +288,7 @@ function deauth_ap_clients() {
     });
     pineAP_deauth_client(clients, source, channel);
 }
-
+    
 function pineAP_send_deauth() {
     var multiplier = $("select[name='deauth_multiplier']").val();
     $.post('/components/system/pineap/functions.php?deauth',
@@ -290,10 +299,10 @@ function pineAP_send_deauth() {
             'multiplier' : multiplier
         }, function(data) {
             if (data.length) {
-                popup("<center><img style='width: 2.0em;' src='/includes/img/throbber.gif'></center>");
+                popup("<center>Sending deauth(s)...<br><br><img style='width: 2.0em;' src='/includes/img/throbber.gif'></center>");
                 setTimeout(close_popup, 1000);
             } else {
-                popup("<center><span class='error'>Error sending deauth. PineAP must be started. <a id='overlay_start_pineap' href='#' onclick=\"make_request('/components/system/pineap/functions.php?action=start_pineap'); return false;\">START NOW</a></span></center>");
+                popup("<center><span class='error'>Error sending deauth. PineAP must be started. <br><br><a id='overlay_start_pineap' href='#' onclick=\"start_pineap('resend_deauth'); return false;\">START NOW</a></span></center>");
             }
         }
     );
