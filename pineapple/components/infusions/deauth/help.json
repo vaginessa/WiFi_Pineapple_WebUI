@@ -1,0 +1,4 @@
+{
+    "whitelist" : "Add MAC address on the whitelist of APs that you do not want to attack. <br/>Use <strong>#</strong> for comments. <br/>With Aireplay-ng only, you can use <strong>[a-zA-Z0-9]*</strong> for all APs. <br/><br/>Please note that mdk3 can only works in one mode: blacklist or whitelist. You have to choose in the configuration tab which mode you would like to use for mdk3.",
+    "blacklist" : "Add MAC address on the blacklist of APs that you do want to attack. <br/>Use <strong>#</strong> for comments. <br/>With Aireplay-ng only, you can use <strong>[a-zA-Z0-9]*</strong> for all APs. <br/><br/>Please note that mdk3 can only works in one mode: blacklist or whitelist. You have to choose in the configuration tab which mode you would like to use for mdk3."
+}

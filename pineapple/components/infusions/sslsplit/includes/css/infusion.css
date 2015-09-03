@@ -1,0 +1,111 @@
+select.sslsplit {
+	background-color: black;
+	border-style: none;
+	color: green;
+}
+
+input.sslsplit {
+	background-color: black;
+	color: green;
+	border-style: none;
+}
+
+textarea.sslsplit {
+	background-color: black;
+	color: green;
+	border-style: none;
+	height: 250px;
+	width: 100%;
+}
+
+textarea#sslsplit_output_small {
+	height: 80%;
+	color: white;
+	overflow: hidden;
+}
+
+input.sslsplit[type="checkbox"] {
+	margin: 0;
+}
+
+#sslsplit.grid {
+	padding: 0;
+	border-spacing: 1px;
+	border-collapse: separate;
+	color: black;
+}
+
+#sslsplit.grid td {
+	padding: 2px;
+	margin: 0px;
+	color: black;
+}
+
+#sslsplit.tab ul {
+	margin-left: -40px;
+}
+#sslsplit.tab li {
+	list-style: none;
+	float: left;
+}
+#sslsplit.tab ul a {
+	display: block;
+	padding: 6px 10px;
+	text-decoration: none!important;
+	margin: 1px;
+	margin-left: 0;
+	color: #FFF;
+	background: green;
+}
+#sslsplit.tab ul a:hover {
+	color: #FFF;
+	background: #111;
+}
+#sslsplit.tab ul a.selected {
+	margin-bottom: 0;
+	color: #000;
+	background: snow;
+	border-bottom: 1px solid snow;
+	cursor: default;
+}
+#sslsplit.tab div {
+	padding: 10px 5px;
+	clear: left;
+	background: snow;
+	color: black;
+}
+#sslsplit.tab div a {
+	color: #000;
+	font-weight: bold;
+}
+
+.sidePanelLeft {
+	margin-bottom: 15px;
+	text-align: left;
+	min-width: 380px;
+	max-width: 550px;
+	font-family: monospace;
+}
+
+.sidePanelTitle {
+	padding-left: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background: green;
+	font-weight: bold;
+	font-size: 15;
+	color: white;
+}
+
+.sidePanelContent {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: black;
+	min-height: 40px;
+	color: white;
+	border-color: green;
+	border-style: solid;
+	border-width: 1px
+}

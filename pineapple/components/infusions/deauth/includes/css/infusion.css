@@ -1,0 +1,198 @@
+select.deauth {
+	background-color: black;
+	border-style: none;
+	color: green;
+}
+
+input.deauth {
+	background-color: black;
+	color: green;
+	border-style: none;
+}
+
+textarea.deauth {
+	background-color: black;
+	color: green;
+	border-style: none;
+	height: 250px;
+	width: 100%;
+}
+
+textarea#deauth_output_small {
+	height: 80%;
+	color: white;
+	overflow: hidden;
+}
+
+input.deauth[type="checkbox"] {
+	margin: 0;
+}
+
+.graph-border {
+	background: #FFF;
+	border: 1px solid #DDD;
+	height: 16px;
+}
+.graph-bar {
+	text-align: left;
+	color: black;
+	height: 16px;
+}
+.graph {
+	color: white;
+	background: black;
+	font-weight: bold;
+}
+
+#deauth-survey-grid.grid {
+	padding: 0;
+	border-spacing: 1px;
+	border-collapse: separate;
+	border: 1px solid #e0e0e0;
+	background: #fff;
+	color: black;
+}
+
+#deauth-survey-grid.grid tr {
+	cursor: pointer;
+}
+
+#deauth-survey-grid.grid td {
+	padding: 2px;
+	margin: 0px;
+}
+
+#deauth-survey-grid.grid .header {
+	color: black;
+	background: #e7e7e7;
+}
+#deauth-survey-grid.grid .header td {
+	font-weight: bold;
+}
+#deauth-survey-grid.grid .footer {
+	background: #f0f0f0;
+}
+#deauth-survey-grid.grid .odd {
+	background: #f7f7f7;
+}
+#deauth-survey-grid.grid .even {
+	background: #fff;
+}
+
+#deauth.grid {
+	padding: 0;
+	border-spacing: 1px;
+	border-collapse: separate;
+	color: black;
+}
+
+#deauth.grid td {
+	padding: 2px;
+	margin: 0px;
+	color: black;
+}
+
+#deauth.tab ul {
+	margin-left: -40px;
+}
+#deauth.tab li {
+	list-style: none;
+	float: left;
+}
+#deauth.tab ul a {
+	display: block;
+	padding: 6px 10px;
+	text-decoration: none!important;
+	margin: 1px;
+	margin-left: 0;
+	color: #FFF;
+	background: green;
+}
+#deauth.tab ul a:hover {
+	color: #FFF;
+	background: #111;
+}
+#deauth.tab ul a.selected {
+	margin-bottom: 0;
+	color: #000;
+	background: snow;
+	border-bottom: 1px solid snow;
+	cursor: default;
+}
+#deauth.tab div {
+	padding: 10px 5px;
+	clear: left;
+	background: snow;
+	color: black;
+}
+#deauth.tab div a {
+	color: #000;
+	font-weight: bold;
+}
+
+.my_large_tile_content {
+    height: 95%;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.sidePanelLeft {
+	margin-bottom: 15px;
+	text-align: left;
+	min-width: 380px;
+	max-width: 550px;
+	font-family: monospace;
+}
+
+.sidePanelTitle {
+	padding-left: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	background: green;
+	font-weight: bold;
+	font-size: 15;
+	color: white;
+}
+
+.sidePanelContent {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: black;
+	min-height: 40px;
+	color: white;
+	border-color: green;
+	border-style: solid;
+	border-width: 1px
+}
+
+#list_fieldset {
+	min-height: 264px;
+}
+
+#list_blacklist ul, #list_whitelist ul {
+	list-style: none outside none;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+#list_blacklist li, #list_whitelist li {
+	float: none;
+	cursor: pointer;
+	margin: 0 0 5px;
+	padding: 0 0 5px;
+}
+
+#deauth_form_conf {
+	margin: 0;
+	padding: 0;
+}
+
+.interfaces {
+	color: white;
+}
+.interfaces td {
+	padding-right: 20px;
+	margin: 0px;
+}

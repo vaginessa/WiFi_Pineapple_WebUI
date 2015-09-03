@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ "$#" -ne "1" ]; then
+	echo "DIP Status script version 1.0 by Whistle Master"
+	echo "Usage: dipstatus <DIP2|DIP3|DIP4>"
+	echo ""
+	exit
+fi
+
+# ${dip}
+handle_dip()
+{
+	dip_status=0
+	
+	echo ${1} > /sys/class/gpio/export
+	dip_status=`cat /sys/class/gpio/gpio${1}/value`
+	
+	if [ "${1}" = "16" ]; then
+		dip_status=$((${dip_status}*(-1)+1))
+	fi
+	
+	echo ${1} > /sys/class/gpio/unexport
+	
+	echo ${dip_status}
+}
+
+case "$1" in
+"DIP2")
+    handle_dip 13
+    ;;
+"DIP3")
+    handle_dip 15
+    ;;
+"DIP4")
+    handle_dip 16
+    ;;
+*)
+    echo "Usage: dipstatus <DIP2|DIP3|DIP4>"
+    ;;
+esac
