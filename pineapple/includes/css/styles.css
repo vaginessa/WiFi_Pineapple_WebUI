@@ -541,7 +541,8 @@ help:before {
 .progress_bar > span {
     width: 0%;
     height: 100%;
-    background-color: lime;
+    //background-color: lime;
+    background-color: orange;
     display: block;
     position: relative;
     overflow: hidden;
