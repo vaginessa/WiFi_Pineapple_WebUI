@@ -10,6 +10,10 @@ function ap_scan()
     retreive_aps();
 }
 
+function make_request(url) {
+	$.get(url);
+}
+
 function retreive_aps(){
     $.get('/overlay/overlay.php?retreive_aps', function(data){
         if(data.length){

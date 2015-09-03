@@ -1,9 +1,9 @@
 input[type=submit], select {
-    background-color: green;
+    background-color: #E05900;
     color: white;
     border-style: solid;
     border-width: 1px;
-    border-color: Green;
+    border-color: #E05900;
     outline: 0;
 }
 
@@ -36,7 +36,7 @@ toggle[checked] {
 
 .notification_center {
     position: absolute;
-    border: 1px solid green;
+    border: 1px solid #E05900;
     border-top: 0;
     padding-top: 1em;
     padding-right: 2px;
@@ -51,7 +51,7 @@ toggle[checked] {
 }
 
 .notification {
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #E05900;
     padding-bottom: 5px;
     padding-top: 7px;
     padding-left: 2px;
@@ -108,7 +108,7 @@ toggle[checked] {
 .view_selection {
     position: absolute;
     background: black;
-    border: 1px solid green;
+    border: 1px solid #E05900;
     border-top: 0;
     display: none;
     z-index: 90;
@@ -116,7 +116,7 @@ toggle[checked] {
 }
 
 .view_item {
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #E05900;
     padding-bottom: 5px;
     padding-top: 7px;
     padding-left: 2px;
@@ -190,7 +190,7 @@ toggle[checked] {
     height: 30%;
     overflow: hidden;
 
-    border: 3px solid green;
+    border: 3px solid #E05900;
 }
 
 .tile_title {
@@ -198,7 +198,7 @@ toggle[checked] {
     text-decoration: underline;
     padding-bottom: 5px;
     cursor: pointer;
-    background: green; /*#186018*/
+    background: #E05900; /*#186018*/
     width: 100%;
 }
 
@@ -206,7 +206,7 @@ toggle[checked] {
     text-align: center;
     text-decoration: underline;
     padding-bottom: 5px;
-    background: green; /*#186018*/
+    background: #E05900; /*#186018*/
     width: 100%;
 }
 
@@ -237,7 +237,7 @@ toggle[checked] {
     right: -50%;
     left: -50%; 
     top: 60px; 
-    border: 3px solid green;
+    border: 3px solid #E05900;
     width: 93.25%;
     height: 85%;
 
@@ -313,7 +313,7 @@ toggle[checked] {
     float: left;
     overflow: hidden;
     text-transform: capitalize;
-    border: solid 1px green;
+    border: solid 1px #E05900;
 }
 
 #close {
@@ -332,7 +332,7 @@ toggle[checked] {
     min-height: 15em; 
     width: 50em; 
     margin-left: -25em; 
-    border: solid 2px green;
+    border: solid 2px #E05900;
     background-color: black;
     padding: 1em; 
     z-index: 100;
@@ -464,7 +464,7 @@ help:before {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: green;
+    background: #E05900;
     padding-right: 10px;
     visibility: visible;
 }
@@ -479,7 +479,7 @@ help:before {
     left: 0px;
     width: 97.7%;
     height:30px;
-    border-bottom: solid 1px green;
+    border-bottom: solid 1px #E05900;
     padding-right: 1px;
     margin-top: 30px;
     margin-bottom: 0px;
@@ -490,10 +490,10 @@ help:before {
     float:left;
     /*display: inline-block;*/
     list-style:none;
-    border-top:1px solid green;
-    border-left:1px solid green;
-    border-right:1px solid green;
-    border-bottom: solid 1px green;
+    border-top:1px solid #E05900;
+    border-left:1px solid #E05900;
+    border-right:1px solid #E05900;
+    border-bottom: solid 1px #E05900;
     margin-right:5px;
     outline:none;
 }
@@ -506,7 +506,7 @@ help:before {
     padding-right: 7px;
     padding-bottom: 8px;
     display:block;
-    background: green;
+    background: #E05900;
     outline:none;
     cursor: pointer;
 }
@@ -515,7 +515,7 @@ help:before {
     outline:none;
 }
 #tabs li a:hover, #tabs li a.inactive:hover {
-    background: green;
+    background: #E05900;
     outline:none;
 }
 
