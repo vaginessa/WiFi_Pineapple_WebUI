@@ -62,7 +62,7 @@ if (isset($_GET['retreive_stations'])) {
     <br />
     <div class='overlay_loading'>
         <img width="100px" src="/includes/img/throbber.gif"><br />
-        <h3 style="background-color:black;">Running Initial Scan</h3>
+        <h3 style="background-color:black;">Running initial scan</h3>
     </div>
     <span class='overlay_col' id='1'></span>
     <span class='overlay_col' id='2'></span>
