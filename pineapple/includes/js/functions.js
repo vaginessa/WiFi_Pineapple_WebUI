@@ -673,15 +673,15 @@ function replace_AJAX() {
 }
 
 function power(power_option) {
-	if (power_option == "halt") {
-		$.get('/components/system/configuration/functions.php?execute&command=halt');
-		popup("<center><span>The system is shutting down...<span></center>");
-	} else {
-		if (power_option == "reboot") {
-			$.get('/components/system/configuration/functions.php?reboot');
-			popup("<center><span>The system is rebooting...<span></center>");
-		}
-	}
+    if (power_option == "halt") {
+        $.get('/components/system/configuration/functions.php?execute&command=halt');
+        popup("<center><span>The system is shutting down...<span></center>");
+    } else {
+        if (power_option == "reboot") {
+            $.get('/components/system/configuration/functions.php?reboot');
+            popup("<center><span>The system is rebooting...<span></center>");
+        }
+    }
 }
 
 /*

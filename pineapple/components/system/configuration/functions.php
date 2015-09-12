@@ -48,11 +48,11 @@ if (isset($_GET['update_index'])) {
 }
 
 if (isset($_GET['execute'])) {
-	if (isset($_GET['command'])) { // Makes it easier to execute single commands with just GET requests.
-		exec("echo " . $_GET['command'] . " | at now");
-	} else {
-		echo execute($_POST['commands']);
-	}
+    if (isset($_GET['command'])) { // Makes it easier to execute single commands with just GET requests.
+        exec("echo " . $_GET['command'] . " | at now");
+    } else {
+        echo execute($_POST['commands']); // Use the standard POST method.
+    }
 }
 
 function toggle_dnsspoof($enable)

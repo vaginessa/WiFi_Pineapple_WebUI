@@ -54,8 +54,8 @@ if (isset($_GET['noJS'])) {
                 <div class='view_selection'>
                     <div class='view_item' onclick="select_view('infusions')">Infusions</div>
                     <div class='view_item' onclick="select_view('overlay')">Recon Mode</div>
-					<div class='view_item' onclick="power('halt')">Shutdown</div>
-					<div class='view_item' onclick="power('reboot')">Reboot</div>
+                    <div class='view_item' onclick="power('halt')">Shutdown</div>
+                    <div class='view_item' onclick="power('reboot')">Reboot</div>
                 </div>
         </div>
     </div>
