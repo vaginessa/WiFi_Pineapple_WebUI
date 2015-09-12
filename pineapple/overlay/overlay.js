@@ -10,13 +10,9 @@ function ap_scan()
     retreive_aps();
 }
 
-function make_request(url) {
-    $.get(url);
-}
-
 function start_pineap(option, option2) {
     popup("<center>Starting PineAP...<br><br><img style='width: 2.0em;' src='/includes/img/throbber.gif'></center>");
-    make_request('/components/system/pineap/functions.php?action=start_pineap');
+    $.get('/components/system/pineap/functions.php?action=start_pineap');
     setTimeout(close_popup, 1000);
     if (option == "resend_deauth") {
         // Deauth code goes here.

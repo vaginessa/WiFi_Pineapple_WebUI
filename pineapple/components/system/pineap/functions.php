@@ -5,7 +5,6 @@ include('/pineapple/includes/api/tile_functions.php');
 
 $pineapple = new Pineapple(__FILE__);
 $pineapple->magicToggleFunctions(true);
-
     
 if (isset($_GET['action'])) {
     switch ($_GET['action']) {
