@@ -19,9 +19,6 @@ function init(){
     populate_hidden_tiles();
 }
 
-
-
-
 /**
 * Function to send a notification
 * @param  {string} message The notification text
@@ -618,8 +615,6 @@ return this;
 }
 
 
-
-
 /*
 TODO
 */
@@ -677,6 +672,17 @@ function replace_AJAX() {
     }
 }
 
+function power(power_option) {
+	if (power_option == "halt") {
+		$.get('/components/system/configuration/functions.php?execute&command=halt');
+		popup("<center><span>The system is shutting down...<span></center>");
+	} else {
+		if (power_option == "reboot") {
+			$.get('/components/system/configuration/functions.php?reboot');
+			popup("<center><span>The system is rebooting...<span></center>");
+		}
+	}
+}
 
 /*
 Function overriding jQuery's GET function. Handles 502 automatically.
